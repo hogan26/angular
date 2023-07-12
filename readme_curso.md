@@ -17,3 +17,10 @@ ABRIR PROYECTO
 - esto levantará los servicios y proporcionará una URL local con un puerto abierto para trabajar o el comando "ng serve -o" lo que abrirá automaticamente el 
 proyecto en la URL
 
+ESTRUCTURA DE DIRECTORIOS (complementar con lo visto en horario de trabajo)
+
+- la carpeta assets almacena los imagenes
+- la carpeta environment almacena archivos de configuracion como por ejemplo credenciales para conectarse a una API, etc. este directorio cuenta con un archivo para
+cada rama del flujo (local, test, produccion). por defecto crea las de local y producción.
+- el archivo styles.css de la carpeta app permite definir estilos globales que se aplicaran a todas las etiquetas del proyecto que hagan uso de ella
+
