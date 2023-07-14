@@ -1,0 +1,27 @@
+<!-- <p>botones works!</p> -->
+<!-- implementamos un metodo que al hacer click en el boton actualiza el valor de la variable 'text_color' que esta definida en el
+componente
+tambien hay 2 metodos diferentes para asignar atributos -->
+
+<!-- metodo 1 -->
+<!-- <button [class.disabled]="button_disabled" class="btn btn-danger" (click)="text_color = 'text-danger'">rojo</button>
+<button [class.disabled]="button_disabled" class="btn btn-warning" (click)="text_color = 'text-warning'">amarillo</button>
+<button [class.disabled]="button_disabled" class="btn btn-success" (click)="text_color = 'text-success'">verde</button> -->
+
+<!-- metodo 2, la ventaja de este metodo es que permite añadir varios atributos y controlarlos de manera dinamica,
+tambien se puede asignar como [ngClass] -->
+<button [ngClass]="{
+    'disabled':button_disabled,
+    'btn': button_disabled,
+    'btn-danger': button_disabled
+
+}" (click)="text_color = 'text-danger'">rojo</button>
+<button [class]="{'disabled':button_disabled}" class="btn btn-warning" (click)="text_color = 'text-warning'">amarillo</button>
+<button [class]="{'disabled':button_disabled}" class="btn btn-success" (click)="text_color = 'text-success'">verde</button>
+
+<br>
+<!-- para asginar una clase de manera dinamica basada en el valor de una variable se sigue la siguiente sintaxis: -->
+<span [class]="text_color">texto para cambiar de color</span>
+<br>
+<!-- <span>{{text_color}}</span> -->
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar botones</button>

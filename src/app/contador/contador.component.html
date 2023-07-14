@@ -6,13 +6,18 @@
 <h2>mi edad es: {{ persona.edad }}</h2>
 <br><hr><br>
 
-<button>
+<!-- event binding: si bien se puede definir la logica de un metodo asociada a un evento directamente en la plantilla, esta no es
+una buena practica, primero porque tiene limitaciones de sintaxis y tambien porque ensucia el codigo. Lo mejor es definir el metodo
+dentro el componente y llamarlo en la plantilla -->
+<button (click)="decrementar()">
+<!-- <button (click)="numero = numero - 1"> -->
 -
 </button>
 <span>
     {{numero}}
 </span>
-<button>
+<button (click)="incrementar()">
+<!-- <button (click)="numero = numero + 1"> -->
 +
 </button>
 

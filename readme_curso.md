@@ -17,6 +17,12 @@ ABRIR PROYECTO
 - esto levantará los servicios y proporcionará una URL local con un puerto abierto para trabajar o el comando "ng serve -o" lo que abrirá automaticamente el 
 proyecto en la URL
 
+ABRIR PROYECTO CLONADO
+
+- para abrir un documento clonado desde github, habiendo completado ya los pasos de la sección "REQUERIMIENTOS" de esta documentación
+debe instalar los modulos de npm (node package management) ya que estos no se suben a la nube cuando se carga el proyecto. Por lo tanto,
+debe ejecutar el comando "npm install" y luego abrir el proyecto con el comando "ng serve"
+
 ESTRUCTURA DE DIRECTORIOS (complementar con lo visto en horario de trabajo)
 
 - la carpeta assets almacena los imagenes

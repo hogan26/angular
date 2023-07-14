@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 //primero importamos el componente recien creado, luego se ingresa al apartado de "declarations"
 
 import { ContadorComponent } from './contador/contador.component';
+import { BotonesComponent } from './botones/botones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContadorComponent
+    ContadorComponent,
+    BotonesComponent
   ],
   imports: [
     BrowserModule
