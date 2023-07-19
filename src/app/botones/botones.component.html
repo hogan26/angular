@@ -10,12 +10,7 @@ tambien hay 2 metodos diferentes para asignar atributos -->
 
 <!-- metodo 2, la ventaja de este metodo es que permite añadir varios atributos y controlarlos de manera dinamica,
 tambien se puede asignar como [ngClass] -->
-<button [ngClass]="{
-    'disabled':button_disabled,
-    'btn': button_disabled,
-    'btn-danger': button_disabled
-
-}" (click)="text_color = 'text-danger'">rojo</button>
+<button [ngClass]="{'disabled':button_disabled,'btn': button_disabled,'btn-danger': button_disabled}" (click)="text_color = 'text-danger'">rojo</button>
 <button [class]="{'disabled':button_disabled}" class="btn btn-warning" (click)="text_color = 'text-warning'">amarillo</button>
 <button [class]="{'disabled':button_disabled}" class="btn btn-success" (click)="text_color = 'text-success'">verde</button>
 
@@ -25,3 +20,14 @@ tambien se puede asignar como [ngClass] -->
 <br>
 <!-- <span>{{text_color}}</span> -->
 <button class="btn btn-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar botones</button>
+<hr><br>
+<div>
+    <button class="btn btn-primary" (click)="src = 'https://images.pexels.com/photos/15236595/pexels-photo-15236595/free-photo-of-ciudad-paisaje-vacaciones-gente.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">
+        imagen 1
+    </button>
+    <button class="btn btn-danger" (click)="src = 'https://images.pexels.com/photos/17543776/pexels-photo-17543776/free-photo-of-nieve-paisaje-agua-verano.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'">
+        imagen 2
+    </button>
+</div>
+
+<img [src]="src" alt="">

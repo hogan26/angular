@@ -1,0 +1,11 @@
+<!-- <p>formulario works!</p> -->
+
+<!-- el #name se conoce como variable de plantilla 
+este ejemplo corresponde a una forma simple de trabajar con formularios-->
+<input type="text" placeholder="ingresa tu nombre" class="form-control" #name>
+
+<!-- el boton queda a la escucha de un evento click que ejecuta una funcion definida en el componente que recibe como parametro el valor de la variable
+de plantilla "name", la cual la imprime en consola -->
+<button class="btn btn-primary mt-2" (click)="mostrar_en_consola(name.value)">
+    mostrar en consola
+</button>
