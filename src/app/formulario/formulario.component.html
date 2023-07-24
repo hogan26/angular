@@ -9,3 +9,19 @@ de plantilla "name", la cual la imprime en consola -->
 <button class="btn btn-primary mt-2" (click)="mostrar_en_consola(name.value)">
     mostrar en consola
 </button>
+<br>
+<!-- una ventaja de angular es que se pueden usar sentencias if - else en las etiquetas html, la sintaxis se muesta a continuacion
+como se puede ver, despues de la sentencia else, se llama a una variable de nombre "mensaje", esta en realizada hace referencia
+a una plantilla, para que esto pueda llamar a una plantilla se debe crear una etiqueta ng-template con el nombre ingresado en
+la sentencia else. con esto cuando la condicion corresponda llamará a la plantilla definida. -->
+<div class="alert alert-success" *ngIf="show_alert; else mensaje">
+    <p>mensaje enviado correctamente</p>
+    <button class="btn btn-danger" (click)="show_alert = false">x</button>
+</div>
+<ng-template #mensaje>
+    <div class="alert alert-warning mt-2">
+        <p>mensaje de prueba</p>
+    </div>
+</ng-template>
+
+

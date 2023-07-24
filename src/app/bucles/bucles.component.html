@@ -1,0 +1,9 @@
+<!-- <p>bucles works!</p> -->
+<!-- si yo dejo esto tal cual con las llaves, se mostrara una lista de tipo objetos, por lo tanto para mostrar el contenido debo iterarlos -->
+<!-- {{personas}} -->
+
+<ul>
+    <li *ngFor="let persona of personas; let i = index">
+        {{ i + 1}} - {{ persona.nombre }} ({{persona.edad}})
+    </li>
+</ul>
